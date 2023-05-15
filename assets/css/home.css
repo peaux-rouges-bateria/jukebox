@@ -1,5 +1,5 @@
 body {
-  background: #D23789;
+  background: #cf2113;
   background-image: url("../img/zebra.svg");
   background-size: cover;
   margin: 10px;
@@ -50,14 +50,14 @@ li {
   color: #000;
 }
 .label {
-  color: #D23789;
+  color: #cf2113;
   font-weight: bold;
   font-size: x-small;
   text-transform: uppercase;
   margin-left: 5px;
 }
 li:hover {
-  background-color: #D23789;
+  background-color: #cf2113;
   color: #FFF;
 }
 li:hover .label {
@@ -89,7 +89,7 @@ li:hover .item-logo {
 }
 
 #quizz-link:hover {
-  background-color: #D23789;
+  background-color: #cf2113;
   color: #FFF;
 }
 

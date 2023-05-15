@@ -1,167 +1,260 @@
 <!DOCTYPE html>
 <html>
-<head>
-  <title>Jukebox Yolande</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="./assets/css/w3.css"> 
-</head>
-<body>
-  <div id="content">
-    <div id="title-block">
-      <div id="title-img-wrapper">
-        <img id="title-img" src="./assets/img/yolande.png" class="logo">
+  <head>
+    <title>Jukebox Yolande</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./assets/css/w3.css" />
+  </head>
+  <body>
+    <div id="content">
+      <div id="title-block">
+        <div id="title-img-wrapper">
+          <img id="title-img" src="./assets/img/yolande.png" class="logo" />
+        </div>
+        <h1 id="title-text">Nom du break</h1>
       </div>
-      <h1 id="title-text">Nom du break</h1>
-    </div>
 
-    <div id="speed-controls">
-      <div class="speed-button"><img src="./assets/img/turtle.png" class="speed-img" onclick="slowdown()"></div>
-      <div class="speed-input"><input type="range" id="speed-slider" name="speed" min="0.5" max="1.5" step="0.1" value="1" onchange="setSpeed(this.value)"></div>
-      <div class="speed-button"><img src="./assets/img/rabbit.png" class="speed-img" onclick="accelerate()"></div>
-    </div>
+      <div id="speed-controls">
+        <div class="speed-button">
+          <img
+            src="./assets/img/turtle.png"
+            class="speed-img"
+            onclick="slowdown()"
+          />
+        </div>
+        <div class="speed-input">
+          <input
+            type="range"
+            id="speed-slider"
+            name="speed"
+            min="0.5"
+            max="1.5"
+            step="0.1"
+            value="1"
+            onchange="setSpeed(this.value)"
+          />
+        </div>
+        <div class="speed-button">
+          <img
+            src="./assets/img/rabbit.png"
+            class="speed-img"
+            onclick="accelerate()"
+          />
+        </div>
+      </div>
 
-    <div id="tracks" />
+      <div id="tracks" />
 
-    <div id="playback-controls" class="w3-card-4">
-      <div class="control-button"><img src="./assets/img/stop.png" class="button-img" onclick="reset()"></div>
-      <div class="control-button"><img src="./assets/img/rewind.png" class="button-img" onclick="skipBackward()"></div>
-      <div class="control-button"><img src="./assets/img/play.png" class="button-img" id="playButton" onclick="playPause()"></div>
-      <div class="control-button"><img src="./assets/img/forward.png" class="button-img" onclick="skipForward()"></div>
-      <div class="control-button"><img src="./assets/img/repeat.png" class="button-img muted" id="repeat-button" onclick="toggleRepeat()"></div>
+      <div id="playback-controls" class="w3-card-4">
+        <div class="control-button">
+          <img
+            src="./assets/img/stop.png"
+            class="button-img"
+            onclick="reset()"
+          />
+        </div>
+        <div class="control-button">
+          <img
+            src="./assets/img/rewind.png"
+            class="button-img"
+            onclick="skipBackward()"
+          />
+        </div>
+        <div class="control-button">
+          <img
+            src="./assets/img/play.png"
+            class="button-img"
+            id="playButton"
+            onclick="playPause()"
+          />
+        </div>
+        <div class="control-button">
+          <img
+            src="./assets/img/forward.png"
+            class="button-img"
+            onclick="skipForward()"
+          />
+        </div>
+        <div class="control-button">
+          <img
+            src="./assets/img/repeat.png"
+            class="button-img muted"
+            id="repeat-button"
+            onclick="toggleRepeat()"
+          />
+        </div>
+      </div>
     </div>
-  </div>
 
     <div class="w3-padding w3-center">
-      <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"><img alt="Licence Creative Commons" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" href="http://purl.org/dc/dcmitype/InteractiveResource" property="dct:title" rel="dct:type">Le Jukebox</span> de <a xmlns:cc="http://creativecommons.org/ns#" href="https://yolandedobrasil.org" property="cc:attributionName" rel="cc:attributionURL">Yolande do Brasil</a> est mis à disposition selon les termes de <br> la <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/">licence Creative Commons Attribution - Pas d’Utilisation Commerciale - Partage dans les Mêmes Conditions 4.0 International</a>.<br />Fondé(e) sur une œuvre à <a xmlns:dct="http://purl.org/dc/terms/" href="https://jukebox.yolandedobrasil.org" rel="dct:source">https://jukebox.yolandedobrasil.org</a>.<br />Les autorisations au-delà du champ de cette licence peuvent être obtenues à <a xmlns:cc="http://creativecommons.org/ns#" href="https://yolandedobrasil.org" rel="cc:morePermissions">https://yolandedobrasil.org</a>.
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"
+        ><img
+          alt="Licence Creative Commons"
+          style="border-width: 0"
+          src="https://i.creativecommons.org/l/by-nc-sa/4.0/88x31.png" /></a
+      ><br /><span
+        xmlns:dct="http://purl.org/dc/terms/"
+        href="http://purl.org/dc/dcmitype/InteractiveResource"
+        property="dct:title"
+        rel="dct:type"
+        >Le Jukebox</span
+      >
+      de
+      <a
+        xmlns:cc="http://creativecommons.org/ns#"
+        href="https://yolandedobrasil.org"
+        property="cc:attributionName"
+        rel="cc:attributionURL"
+        >Yolande do Brasil</a
+      >
+      est mis à disposition selon les termes de <br />
+      la
+      <a rel="license" href="http://creativecommons.org/licenses/by-nc-sa/4.0/"
+        >licence Creative Commons Attribution - Pas d’Utilisation Commerciale -
+        Partage dans les Mêmes Conditions 4.0 International</a
+      >.<br />Fondé(e) sur une œuvre à
+      <a
+        xmlns:dct="http://purl.org/dc/terms/"
+        href="https://jukebox.yolandedobrasil.org"
+        rel="dct:source"
+        >https://jukebox.yolandedobrasil.org</a
+      >.<br />Les autorisations au-delà du champ de cette licence peuvent être
+      obtenues à
+      <a
+        xmlns:cc="http://creativecommons.org/ns#"
+        href="https://yolandedobrasil.org"
+        rel="cc:morePermissions"
+        >https://yolandedobrasil.org</a
+      >.
     </div>
 
-  <style type="text/css">
-    body {
-      background: #D23789;
-      background-image: url("./assets/img/zebra.svg");
-      background-size: cover;
-      margin: 10px;
-      margin-bottom: 80px;
-    }
-    #content {
-      background: white;
-    }
-    #title-block {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    h1 {
-      font-family: "Segoe UI",Arial,sans-serif;
-      font-weight: 400;
-      font-size: 36px;
-      margin-top: 0px;
-      margin-bottom: 0px;
-    }
-    #title-text {
-      flex: 1 1;
-      margin-left: 20px;
-    }
-    #title-img-wrapper {
-      flex: 0 0;
-    }
-    #title-img {
-      background-color: #ccc;
-      width: 120px;
-    }
-
-    #speed-controls {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 10px;
-    }
-    .speed-button {
-      flex: 0 0;
-    }
-    .speed-img {
-      height: 60px;
-    }
-    .speed-input {
-      flex: 2 0;
-    }
-    #speed-slider {
-      width: 100%;
-    }
-
-    #tracks {
-      padding: 10px;
-    }
-    .track {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-    .track-img-wrapper {
-      flex: 0 0;
-    }
-    .track-img {
-      height: 60px;
-    }
-    .muted {
-      filter: opacity(50%);
-    }
-    .track-player {
-      flex: 1 1;
-    }
-
-    #playback-controls {
-      position: fixed;
-      z-index: 10;
-      left: 0px;
-      bottom: 0px;
-      width: 100%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      background: #FAFAFA;
-    }
-    .control-button {
-      flex: 0 0;
-    }
-    .button-img {
-      height: 60px;
-    }
-
-    @media (min-width: 500px) {
-      #content {
-        width: 80%;
-        margin-left: auto;
-        margin-right: auto;
-      }
-      #title-img {
-        width: 200px;
-        margin: 5px;
-      }
-    }
-
-    @media (min-width: 900px) {
-      #content {
-        width: 60%;
-      }
-      #title-img {
-        width: 240px;
+    <style type="text/css">
+      body {
+        background: #cf2113;
+        background-image: url('./assets/img/zebra.svg');
+        background-size: cover;
         margin: 10px;
+        margin-bottom: 80px;
       }
-    }
-  </style>
+      #content {
+        background: white;
+      }
+      #title-block {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      h1 {
+        font-family: 'Segoe UI', Arial, sans-serif;
+        font-weight: 400;
+        font-size: 36px;
+        margin-top: 0px;
+        margin-bottom: 0px;
+      }
+      #title-text {
+        flex: 1 1;
+        margin-left: 20px;
+      }
+      #title-img-wrapper {
+        flex: 0 0;
+      }
+      #title-img {
+        background-color: #ccc;
+        width: 120px;
+      }
 
-  <script src="./assets/js/wavesurfer.js"></script>
-  <script src="./assets/js/controller.js"></script>
-  <script type="text/javascript">
-    let params = new URLSearchParams(document.location.search.substring(1));
-    let break_id = params.get("break_id")
-    if(!!break_id) {
-      fetch("breaks.json")
-        .then(response => response.json())
-        .then(breaks => init(breaks[break_id], "title-block", "tracks"));
+      #speed-controls {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 10px;
       }
-  </script>
-</body>
+      .speed-button {
+        flex: 0 0;
+      }
+      .speed-img {
+        height: 60px;
+      }
+      .speed-input {
+        flex: 2 0;
+      }
+      #speed-slider {
+        width: 100%;
+      }
+
+      #tracks {
+        padding: 10px;
+      }
+      .track {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+      }
+      .track-img-wrapper {
+        flex: 0 0;
+      }
+      .track-img {
+        height: 60px;
+      }
+      .muted {
+        filter: opacity(50%);
+      }
+      .track-player {
+        flex: 1 1;
+      }
+
+      #playback-controls {
+        position: fixed;
+        z-index: 10;
+        left: 0px;
+        bottom: 0px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: #fafafa;
+      }
+      .control-button {
+        flex: 0 0;
+      }
+      .button-img {
+        height: 60px;
+      }
+
+      @media (min-width: 500px) {
+        #content {
+          width: 80%;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        #title-img {
+          width: 200px;
+          margin: 5px;
+        }
+      }
+
+      @media (min-width: 900px) {
+        #content {
+          width: 60%;
+        }
+        #title-img {
+          width: 240px;
+          margin: 10px;
+        }
+      }
+    </style>
+
+    <script src="./assets/js/wavesurfer.js"></script>
+    <script src="./assets/js/controller.js"></script>
+    <script type="text/javascript">
+      let params = new URLSearchParams(document.location.search.substring(1))
+      let break_id = params.get('break_id')
+      if (!!break_id) {
+        fetch('breaks.json')
+          .then((response) => response.json())
+          .then((breaks) => init(breaks[break_id], 'title-block', 'tracks'))
+      }
+    </script>
+  </body>
 </html>

@@ -1,5 +1,5 @@
 body {
-  background: #D23789;
+  background: #cf2113;
   background-image: url("../img/zebra.svg");
   background-size: cover;
   margin: 10px;
@@ -54,7 +54,7 @@ body {
 }
 
 .picker-choice button:hover {
-  background-color: #D23789;
+  background-color: #cf2113;
 }
 
 .picker-mode {
@@ -102,11 +102,11 @@ img {
   margin: 0px;
   display: block;
   background-color: #FFF;
-  color: #D23789;
+  color: #cf2113;
 }
 
 .demotivator-nav-button:hover {
-  background-color: #D23789;
+  background-color: #cf2113;
   color: #FFF;
 }
 
@@ -126,11 +126,11 @@ hr {
   margin: 10px;
   display: block;
   background-color: #FFF;
-  color: #D23789;
+  color: #cf2113;
 }
 
 .menu-back-button:hover {
-  background-color: #D23789;
+  background-color: #cf2113;
   color: #FFF;
 }
 
@@ -217,7 +217,7 @@ audio {
 }
 
 .nav-button:hover {
-  background-color: #D23789;
+  background-color: #cf2113;
   color: white;
 }
 
