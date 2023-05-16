@@ -370,7 +370,7 @@
     ]
   },
   "viradouro_2003": {
-    "name": "Viradouro 2003",
+    "name": "Samba - tourne",
     "sign": "./breaks/viradouro_2003/signe.png",
     "published": true,
     "new": false,
@@ -425,7 +425,7 @@
     ]
   },
   "funk": {
-    "name": "Funk",
+    "name": "Samba - break",
     "sign": "./breaks/funk/signe.png",
     "published": true,
     "new": false,
